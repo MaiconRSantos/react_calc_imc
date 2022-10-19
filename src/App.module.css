@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.headerContainer img {
+  width: 200px;
+}
+
+.headerContainer {
+  max-width: 900px;
+  margin: 40px auto;
+}
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  gap: 80px;
+}
+.leftSide {
+  flex: 1;
+}
+.container .leftSide h1{
+  margin: 0;
+  font-size: 40px;
+  color: #3A4B5C;
+}
+.container .leftSide p{
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #6A7D88;
+}
+.container .leftSide input{
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid rgba(150, 163, 171, .5);
+  padding: 10px 2px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.container .leftSide input:disabled{
+  opacity: .7;
+}
+
+.container .leftSide button{
+  background-color: #227c9d;
+  color: #fff;
+  font-size: 15px;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px 0;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: all 500ms ease;
+}
+
+.container .leftSide button:hover{
+  opacity: 0.9;
+  transform: scale(1.01);
+}
+.container .leftSide button:disabled{
+  opacity: 0.7;
+}
+.container .leftSide button:disabled:hover{
+  opacity: 0.7;
+  transform: scale(1);
+  cursor: not-allowed;
+}
+
+
+.rightSide {
+  flex: 1;
+  display: flex;
+}
+
+.rightSide .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.container .rightSide .rightBig{
+  flex:1;
+  display: flex;  
+}
+
+.container .rightSide .rightArrow {
+  position: absolute;
+  background-color: #227c9d;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: -35px;
+  margin-top: 145px;
+}
+
+
+@media (max-width: 865px) {
+  
+  header{
+    padding: 0 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+    flex-direction: column;
+    gap:10px
+  }
+
+  .rightSide{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+    position: relative;
+  }
+
+  .container .rightSide .rightArrow{
+    top:0;
+    margin-top: 0px;
+    margin-left: 0;
+    border-radius: 10px;
+  }
+
+}
+
+@media (max-width: 443px) {
+  .rightSide .grid{
+    display: flex;
+    flex-direction: column;
+  }
+}
